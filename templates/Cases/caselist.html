@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 style="margin: auto; display: block; width: 50%;">Welcome</h1>
+
+<table style="width:500px ;margin-left: 10px; " class="table table-bordered">
+    <thead>
+      <tr>
+        <th  scope="col">CaseList</th>
+        <th  scope="col">Download_PDF</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% if pdfs  %}
+        <tr>
+            <td>{{p.pdf}}</td>
+            <td><a href="{{ p.pdf.url }}" class="btn btn-primary btn-sm" ></a>Download</td>
+        </tr>
+
+
+        {% endif %}
+    </tbody>
+  </table>
+{% endblock %}

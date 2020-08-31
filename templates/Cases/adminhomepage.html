@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Welcome Admin</a>
+    <a class="btn btn-danger"href="/adminlogout/">logout</a> 
+  </nav>
+  <h1 style="width: 50%;"> upload pdf</h1>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary btn-sm">upload file</button>
+  </form>
+    
+      
+  {% endblock %}
+  
